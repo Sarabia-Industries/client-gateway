@@ -9,13 +9,12 @@ import {
   ParseUUIDPipe,
   Query,
 } from '@nestjs/common';
+import { ClientProxy, RpcException } from '@nestjs/microservices';
 
 import { ORDER_SERVICE } from 'config';
-import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { firstValueFrom } from 'rxjs';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { OrderPaginationDto } from './dto/order-pagination.dto';
-import { UpdateOrderDto } from './dto/update-order.dto';
 import { StatusDto } from './dto/status.dto';
 
 @Controller('orders')
