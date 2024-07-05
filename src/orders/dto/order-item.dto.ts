@@ -1,3 +1,4 @@
+import { Type } from 'class-transformer';
 import { IsNumber, IsPositive } from 'class-validator';
 
 export class OrderItemDto {
@@ -11,5 +12,6 @@ export class OrderItemDto {
 
   @IsNumber()
   @IsPositive()
+  @Type(() => Number)
   price: number;
 }
