@@ -1,7 +1,8 @@
-import { Module } from '@nestjs/common';
+import { Global, Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
-import { envs, NATS_SERVICE } from '../../config';
+import { envs, NATS_SERVICE } from 'config';
 
+@Global()
 @Module({
   imports: [
     ClientsModule.register([
